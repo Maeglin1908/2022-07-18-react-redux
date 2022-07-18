@@ -5,6 +5,7 @@
     - [Commandes basiques](#commandes-basiques)
     - [Création d'un projet pré-ini](#création-dun-projet-pré-ini)
   - [Comment ça marche](#comment-ça-marche)
+  - [Pratique d'organisation](#pratique-dorganisation)
   - [Heroku](#heroku)
 
 ## Npm
@@ -31,6 +32,12 @@
 ## Comment ça marche
 
 ![](screens/01.png)
+
+## Pratique d'organisation
+
+- Les "composants" qui n'ont pas d'url (par exemple, logo.js), vont dans "Components"
+- Sinon, s'il y a un url derrière : dans "Pages"
+
 
 ## Heroku
 
