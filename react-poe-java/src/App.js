@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
 import Presentation from "./pages/Presentation";
+import Projet from "./pages/Projet";
 import Routing from "./pages/Routing";
 import "./styles/App.css";
 
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Presentation />} />
             <Route path="/routing" element={<Routing />} />
+            <Route path="/projet" element={<Projet />} />
           </Routes>
         </main>
       </BrowserRouter>

@@ -11,6 +11,9 @@ const Navigation = () => {
         <li>
           <NavLink to="/routing">Routing</NavLink>
         </li>
+        <li>
+          <NavLink to="/projet">Projet fil rouge</NavLink>
+        </li>
       </ul>
     </nav>
   );

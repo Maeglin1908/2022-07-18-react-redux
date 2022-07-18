@@ -26,7 +26,8 @@ const Routing = () => (
       <p>
         <code>npm install react-router-dom</code>
       </p>
-
+    </article>
+    <article>
       <h2>Déclarer les routes</h2>
 
       <p>(Voir App.js)</p>
