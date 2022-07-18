@@ -91,7 +91,7 @@ function Presentation() {
                     </figure>
                 </article>
                 <article>
-                    <h2>Les Styles</h2>
+                    <h2>Les Styles et images</h2>
 
                     <ul>
                         <li>Style : <span style={{color: 'red'}}>mon span en style</span></li>
@@ -103,6 +103,14 @@ function Presentation() {
 
                     <p>Les images utilisées dans les JSX doivent se trouver dans le répertoire public.</p>
                     <p>Leur chemin ne sera pas dynamisé : ce sera transformé en chaine de caractère, et donc buildé tel quel.</p>
+                </article>
+
+                <article>
+                    <h2>Style</h2>
+
+                    <p>Le fichier index.css est un fichier global, utilisé dans tous les composants.</p>
+                    <p>Pour importer du style dans un composant, il faut faire un import en haut du fichier composant.</p>
+                    <p>Le style d'un composant se répercute sur ses enfants.</p>
                 </article>
             </div>
 
