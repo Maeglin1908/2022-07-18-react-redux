@@ -15,7 +15,7 @@ const Presentation = () => (
         )
 */
 
-import './Presentation.css';
+import './../styles/Presentation.css';
 
 function Presentation() {
     const message = 'Vive les JSX !!!';
@@ -59,7 +59,7 @@ function Presentation() {
                     </ul>
 
                     <p>Attention : certaines chaines de caractères doivent être échappées pour pouvoir les afficher.</p>
-                    <p>C'est le cas des accolades : {"{'{'}"} => {'{'}</p>
+                    <p>C'est le cas des accolades : {"{'{'} => {"}</p>
 
                 </article>
 
@@ -98,6 +98,11 @@ function Presentation() {
                         <li style={style}>Mon style en objet "style"</li>
                         <li style={{fontSize: size}}>Attention, les mots en kebab-case en CSS doivent être écrits en camelCase : {'font-size => fontSize'}</li>
                     </ul>
+                    <hr/>
+                    <p>Les images utilisées en CSS doivent être rangées dans src, et le chemin passé se fait depuis le fichier css.</p>
+
+                    <p>Les images utilisées dans les JSX doivent se trouver dans le répertoire public.</p>
+                    <p>Leur chemin ne sera pas dynamisé : ce sera transformé en chaine de caractère, et donc buildé tel quel.</p>
                 </article>
             </div>
 
