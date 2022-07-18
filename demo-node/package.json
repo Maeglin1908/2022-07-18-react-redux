@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node demo-node/index.js",
+    "start": "node index.js",
     "hello": "echo Bonjour"
   },
   "repository": {
@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/Maeglin1908/2022-07-18-react-redux#readme",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "express": "^4.18.1"
   },
   "devDependencies": {
     "bootstrap": "^5.1.3"

@@ -3,6 +3,7 @@
 - [Formation React / Redux](#formation-react--redux)
   - [Npm](#npm)
     - [Commandes basiques](#commandes-basiques)
+    - [Création d'un projet pré-ini](#création-dun-projet-pré-ini)
 
 ## Npm
 
@@ -17,3 +18,10 @@
 - `npm install` : Installer les packages listés par `package.json`
 - `npm remove nomDuPackage` -> Supprimer un package de `node_modules` et du `package.json`
 
+> result : [demo-node](demo-node)
+
+### Création d'un projet pré-ini
+
+- `npx create-react-js nomDuProjet` : Va créer toute une structure de fichier avec des packages pré-installés.
+
+> result : [react-poe-java](react-poe-java)
