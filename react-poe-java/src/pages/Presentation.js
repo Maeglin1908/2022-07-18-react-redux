@@ -28,6 +28,15 @@ function Presentation() {
         url :"https://picsum.photos/300/200"
     }
 
+    const size = 1.2 + 'rem';
+    const style={
+        color: 'purple',
+        fontSize : size,
+        border : 'solid 2px black',
+        borderTopLeftRadius: '10px',
+        borderBottomRightRadius: '10px'
+    }
+
     // Retourne du JSX
     return (
         <>
@@ -80,6 +89,15 @@ function Presentation() {
                         <img src={image.url} alt={image.description} />
                         <figcaption>{image.name}</figcaption>
                     </figure>
+                </article>
+                <article>
+                    <h2>Les Styles</h2>
+
+                    <ul>
+                        <li>Style : <span style={{color: 'red'}}>mon span en style</span></li>
+                        <li style={style}>Mon style en objet "style"</li>
+                        <li style={{fontSize: size}}>Attention, les mots en kebab-case en CSS doivent être écrits en camelCase : {'font-size => fontSize'}</li>
+                    </ul>
                 </article>
             </div>
 

@@ -37,3 +37,5 @@
 Pour déployer sur heroku, du root ou d'un subdir, suivre les liens :
 - [https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true#set-up](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true#set-up)
 - [https://elements.heroku.com/buildpacks/timanovsky/subdir-heroku-buildpack](https://elements.heroku.com/buildpacks/timanovsky/subdir-heroku-buildpack)
+
+> result : [https://boiling-mountain-41758.herokuapp.com/](https://boiling-mountain-41758.herokuapp.com/)
