@@ -30,7 +30,7 @@
 
 ## Comment ça marche
 
-![](screens/../01.png)
+![](screens/01.png)
 
 ## Heroku
 
