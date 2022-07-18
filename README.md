@@ -4,6 +4,7 @@
   - [Npm](#npm)
     - [Commandes basiques](#commandes-basiques)
     - [Création d'un projet pré-ini](#création-dun-projet-pré-ini)
+  - [Heroku](#heroku)
 
 ## Npm
 
@@ -25,3 +26,11 @@
 - `npx create-react-js nomDuProjet` : Va créer toute une structure de fichier avec des packages pré-installés.
 
 > result : [react-poe-java](react-poe-java)
+
+
+
+## Heroku
+
+Pour déployer sur heroku, du root ou d'un subdir, suivre les liens :
+- [https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true#set-up](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true#set-up)
+- [https://elements.heroku.com/buildpacks/timanovsky/subdir-heroku-buildpack](https://elements.heroku.com/buildpacks/timanovsky/subdir-heroku-buildpack)
