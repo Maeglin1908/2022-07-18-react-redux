@@ -4,6 +4,7 @@
   - [Npm](#npm)
     - [Commandes basiques](#commandes-basiques)
     - [Création d'un projet pré-ini](#création-dun-projet-pré-ini)
+  - [Comment ça marche](#comment-ça-marche)
   - [Heroku](#heroku)
 
 ## Npm
@@ -27,7 +28,9 @@
 
 > result : [react-poe-java](react-poe-java)
 
+## Comment ça marche
 
+![](screens/../01.png)
 
 ## Heroku
 
