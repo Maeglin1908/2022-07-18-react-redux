@@ -25,7 +25,7 @@
 
 ### Création d'un projet pré-ini
 
-- `npx create-react-js nomDuProjet` : Va créer toute une structure de fichier avec des packages pré-installés.
+- `npx create-react-app nomDuProjet` : Va créer toute une structure de fichier avec des packages pré-installés.
 
 > result : [react-poe-java](react-poe-java)
 
