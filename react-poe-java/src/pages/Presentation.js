@@ -74,6 +74,7 @@ function Presentation() {
                     </div>
 
                     <p>Pour déclarer une structure littérale (pour l'utiliser comme un objet) :</p>
+                    <pre>{'const image = {\n\tname : "Test image name",\n\tdescription : "une description d\'image test",\n\turl :"https://picsum.photos/300/200"\n}'}</pre>
 
                     <figure>
                         <img src={image.url} alt={image.description} />
