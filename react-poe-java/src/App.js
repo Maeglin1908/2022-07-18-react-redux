@@ -3,6 +3,7 @@ import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
 import Presentation from "./pages/Presentation";
 import Projet from "./pages/Projet";
+import Props from "./pages/Props";
 import Routing from "./pages/Routing";
 import StaticData from "./pages/StaticData";
 import "./styles/App.css";
@@ -22,6 +23,7 @@ function App() {
             <Route path="/routing" element={<Routing />} />
             <Route path="/projet" element={<Projet />} />
             <Route path="/statics" element={<StaticData />} />
+            <Route path="/props" element={<Props />} />
           </Routes>
         </main>
       </BrowserRouter>

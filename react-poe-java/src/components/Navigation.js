@@ -17,6 +17,9 @@ const Navigation = () => {
         <li>
           <NavLink to="/statics">Données statics</NavLink>
         </li>
+        <li>
+          <NavLink to="/props">Les Props</NavLink>
+        </li>
       </ul>
     </nav>
   );
