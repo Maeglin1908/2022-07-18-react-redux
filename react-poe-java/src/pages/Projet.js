@@ -25,6 +25,21 @@ const Projet = () => {
           <li>Créer un composant Navigation avec les liens</li>
         </ol>
       </article>
+
+      <article>
+        <h2>Partie 2 - Mardi</h2>
+        <ol>
+          <li>Créer une classe Jeu (peut être ranger dans un dossier utils/models)</li>
+          <li>Utiliser cette classe pour créer une liste de jeux dans Home</li>
+          <li>
+            Créer des props dans le composant Card, et passer les données depuis Home vers Card (chaque carte récupère 1
+            Jeu, ou les données d'un jeu)
+          </li>
+          <li>Afficher les cartes pour chaque jeu</li>
+          <hr />
+          <li>S'il n'y a pas de jeu, afficher un bandeau d'erreur (peut être un composant)</li>
+        </ol>
+      </article>
     </div>
   );
 };
