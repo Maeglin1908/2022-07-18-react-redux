@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import Presentation from "./pages/Presentation";
 import Projet from "./pages/Projet";
 import Routing from "./pages/Routing";
+import StaticData from "./pages/StaticData";
 import "./styles/App.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Presentation />} />
             <Route path="/routing" element={<Routing />} />
             <Route path="/projet" element={<Projet />} />
+            <Route path="/statics" element={<StaticData />} />
           </Routes>
         </main>
       </BrowserRouter>
