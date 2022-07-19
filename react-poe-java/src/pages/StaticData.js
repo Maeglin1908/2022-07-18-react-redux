@@ -1,11 +1,13 @@
 import WeekDay from "../components/WeekDay";
+import { roleFilter } from "../utils/filter/EnumFilter";
 
 const StaticData = () => {
   const message = "Mon message";
   const jsx = <p>Mon message en jsx</p>;
 
   const date = new Date();
-  let numDate = 6;
+
+  const fruits = ["Fraises", "Framboises", "Abricots", "Raisins"];
   function getMessage() {
     return (
       <>
@@ -39,7 +41,8 @@ const StaticData = () => {
 
   function getDayJSX_moreComplex() {
     const weekend = [0, 6];
-    if (weekend.includes(0)) {
+    const date = 6;
+    if (weekend.includes(date)) {
       //if (weekend.includes(date.getDay())) {
       return WeekEnd();
     }
@@ -102,14 +105,79 @@ const StaticData = () => {
 
         <h3>Si ... Alors ...</h3>
 
-        <code>{"{is_logged && <p>Coucou 1</p>}"}</code>
+        <p>
+          <code>{"{is_logged && <p>Coucou 1</p>}"}</code>
+        </p>
         {is_logged && <p>Coucou 1</p>}
 
-        <code>{"{is_logged || <p>Coucou 2</p>}"}</code>
+        <p>
+          <code>{"{is_logged || <p>Coucou 2</p>}"}</code>
+        </p>
         {is_logged || <p>Coucou 2</p>}
 
-        <code>{"{is_logged ?? <p>Coucou 3</p>}"}</code>
-        {is_logged ?? <p>Coucou 3</p>}
+        <p>
+          Si null ou undefined : <br />
+          <code>{"{is_logged ?? <p>Impossible d'avoir le statut de connection</p>}"}</code>
+        </p>
+        {is_logged ?? <p>Impossible d'avoir le statut de connection</p>}
+      </article>
+
+      <article>
+        <h2>Afficahge de listes</h2>
+
+        <p>Pour afficher du JSX via une fonction, il faut que la fonction retourne du JSX.</p>
+        <p>
+          Pour les tableaux, la méthode "map()" qui permet de retourner quelque chose pour chaque élément du tableau.
+        </p>
+        <p>On peut donc faire de l'affichage de liste grâce à cette fonction : </p>
+        <p>
+          <code>{"{fruits.map((fr) => <li>{fr}</li> )}"}</code>
+        </p>
+        <ul>
+          {fruits.map((fr) => (
+            <li>{fr}</li>
+          ))}
+        </ul>
+
+        <p>
+          Ici on retourne un simple "li", mais on peut afficher quelque chose de plus complexe à l'aide d'une autre
+          fonction, ou d'un composant.
+        </p>
+
+        <h3>Liste + conditionnel :</h3>
+        <pre>{"{!fruits || fruits.length === 0 ? ("}</pre>
+        <pre>{"          <p>La liste est vide.</p>"}</pre>
+        <pre>{"        ) : ("}</pre>
+        <pre>{"          <ul>"}</pre>
+        <pre>{"            {fruits.map((f, index) => ("}</pre>
+        <pre>{"              <li key={`tab2_${index}`}>{f}</li>"}</pre>
+        <pre>{"            ))}"}</pre>
+        <pre>{"          </ul>"}</pre>
+        <pre>{"        )}"}</pre>
+        {!fruits || fruits.length === 0 ? (
+          <p>La liste est vide.</p>
+        ) : (
+          <ul>
+            {fruits.map((f, index) => (
+              <li key={`tab2_${index}`}>{f}</li>
+            ))}
+          </ul>
+        )}
+      </article>
+
+      <article>
+        <h2>Filtrer ou modifier ses données</h2>
+
+        <p>Il ne faut pas hésiter à factoriser son code dans des fichiers / services à part pour le réutiliser.</p>
+        <p>C'est valable aussi pour une simple amélioration de l'affichage des données : </p>
+        <p>
+          Appeler des fonctions sera plus propre et lisible que de faire les modifications dans le JSX. Ca évite
+          également la réptition de code.
+        </p>
+
+        <pre>{'{roleFilter("ADMIN")}'}</pre>
+        <p>Rôle : {roleFilter("ADMIN")}</p>
+        <p>Rôle : {roleFilter("USER")}</p>
       </article>
     </>
   );
