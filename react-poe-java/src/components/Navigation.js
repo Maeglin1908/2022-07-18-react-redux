@@ -20,6 +20,9 @@ const Navigation = () => {
         <li>
           <NavLink to="/props">Les Props</NavLink>
         </li>
+        <li>
+          <NavLink to="/reactivity">La Réactivité</NavLink>
+        </li>
       </ul>
     </nav>
   );

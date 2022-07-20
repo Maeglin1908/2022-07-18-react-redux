@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import Presentation from "./pages/Presentation";
 import Projet from "./pages/Projet";
 import Props from "./pages/Props";
+import Reactivity from "./pages/Reactivity";
 import Routing from "./pages/Routing";
 import StaticData from "./pages/StaticData";
 import "./styles/App.css";
@@ -24,6 +25,7 @@ function App() {
             <Route path="/projet" element={<Projet />} />
             <Route path="/statics" element={<StaticData />} />
             <Route path="/props" element={<Props />} />
+            <Route path="/reactivity" element={<Reactivity />} />
           </Routes>
         </main>
       </BrowserRouter>
