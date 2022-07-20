@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useForm } from "react-hook-form";
 const Formulaire = function () {
     const [book, setBook] = useState("L'Assassin Royal");
     const [bookError, setBookError] = useState(false);
@@ -43,6 +43,16 @@ const Formulaire = function () {
         }
         setCommand(newOrder);
         console.log(newOrder);
+    }
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
+
+    function saveUser(user) {
+        console.log("User saved", user);
     }
 
     return (
@@ -123,6 +133,80 @@ const Formulaire = function () {
                     </p>
                 </form>
                 <p>{JSON.stringify(command)}</p>
+            </article>
+
+            <article>
+                <h2>React Hook Form</h2>
+                <h3>Doc</h3>
+                <p>
+                    <a href="https://react-hook-form.com/api">React Hook Form Doc</a>
+                </p>
+                <h3>Exemple</h3>
+                <p>
+                    <code>npm install react-hook-form</code>
+                </p>
+
+                <form onSubmit={handleSubmit(saveUser)}>
+                    <div>
+                        <label htmlFor="name">Nom</label>
+                        <input type="text" id="name" {...register("name", { required: true })} />
+                        {errors.name && <p className="error">Veuillez entrer un nom.</p>}
+                    </div>
+                    <div>
+                        <label htmlFor="firstName">Prénom</label>
+                        <input
+                            type="text"
+                            id="firstName"
+                            {...register("firstName", {
+                                required: "Vous devez entrer un prénom.",
+                                minLength: { value: 2, message: "Votre prénom semble incorrect..." },
+                            })}
+                        />
+                        <p className="error">{errors.firstName?.message}</p>
+                    </div>
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <input
+                            type="text"
+                            id="email"
+                            {...register("email", { required: true, pattern: /^[\w-.]+@([\w-]+.)+[\w-]{2,4}$/ })}
+                        />
+                        {errors.email && errors.email.type === "required" && (
+                            <p className="error">Veuillez entrer un email.</p>
+                        )}
+                        {errors.email && errors.email.type === "pattern" && (
+                            <p className="error">Votre email semble invalide...</p>
+                        )}
+                    </div>
+                    <div>
+                        <label htmlFor="title">Titre</label>
+                        <select id="title" {...register("title")}>
+                            <option value="monsieur">Monsieur</option>
+                            <option value="madame">Madame</option>
+                            <option value="empereur">Empereur</option>
+                            <option value="imperatrice">Impératrice</option>
+                            <option value="dude">Dude</option>
+                        </select>
+                    </div>
+                    <fieldset>
+                        <legend>Pronoms</legend>
+                        <div>
+                            <label htmlFor="pr1">He / His</label>
+                            <input type="radio" value="he" name="pr" id="pr1" {...register("pronoms")} />
+                        </div>
+                        <div>
+                            <label htmlFor="pr2">She / Her</label>
+                            <input type="radio" value="she" name="pr" id="pr2" {...register("pronoms")} />
+                        </div>
+                        <div>
+                            <label htmlFor="pr3">They / Them</label>
+                            <input type="radio" value="they" name="pr" id="pr3" {...register("pronoms")} />
+                        </div>
+                    </fieldset>
+                    <div>
+                        <button type="submit">Envoyer</button>
+                    </div>
+                </form>
             </article>
         </>
     );
