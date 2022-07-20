@@ -26,6 +26,9 @@ const Navigation = () => {
                 <li>
                     <NavLink to="/forms">Les Formulaires</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/async">L'asynchrone avec Axios</NavLink>
+                </li>
             </ul>
         </nav>
     );

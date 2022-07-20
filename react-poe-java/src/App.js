@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
+import Data from "./pages/Data";
 import Formulaire from "./pages/Formulaire";
 import Presentation from "./pages/Presentation";
 import Projet from "./pages/Projet";
@@ -28,6 +29,7 @@ function App() {
                         <Route path="/props" element={<Props />} />
                         <Route path="/reactivity" element={<Reactivity />} />
                         <Route path="/forms" element={<Formulaire />} />
+                        <Route path="/async" element={<Data />} />
                     </Routes>
                 </main>
             </BrowserRouter>
