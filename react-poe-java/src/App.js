@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
+import Crud from "./pages/Crud";
 import Data from "./pages/Data";
+import EffetBord from "./pages/EffetBord";
 import Formulaire from "./pages/Formulaire";
 import Presentation from "./pages/Presentation";
 import Projet from "./pages/Projet";
@@ -9,6 +11,7 @@ import Props from "./pages/Props";
 import Reactivity from "./pages/Reactivity";
 import Routing from "./pages/Routing";
 import StaticData from "./pages/StaticData";
+
 import "./styles/App.css";
 
 function App() {
@@ -30,6 +33,8 @@ function App() {
                         <Route path="/reactivity" element={<Reactivity />} />
                         <Route path="/forms" element={<Formulaire />} />
                         <Route path="/async" element={<Data />} />
+                        <Route path="/effetbord" element={<EffetBord />} />
+                        <Route path="/crud" element={<Crud />} />
                     </Routes>
                 </main>
             </BrowserRouter>
