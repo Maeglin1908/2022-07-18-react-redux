@@ -64,6 +64,23 @@ const Projet = () => {
                     <li>Dans Home, créer un bouton permettant de vider la liste des jeux.</li>
                 </ol>
             </article>
+            <article>
+                <h2>Partie 4 - Jeudi</h2>
+                <ol>
+                    <li>Créer un fichier JSON qui contiendra des jeux (au même format que la classe déjà utilisée)</li>
+                    <li>
+                        Lancer json-server pour surveiller / créer un serveur sur ce fichier (vous pouvez créer un
+                        script dans le package.json)
+                    </li>
+                    <li>
+                        Créer un service pour les jeux, avec les méthodes de CRUD (syntaxe au choix :{" "}
+                        <code>.then()</code>, ou <code>async await</code>
+                    </li>
+                    <li>Utiliser ce service pour importer les jeux dans Home.</li>
+                    <li>Utiliser ce service pour modifier les jeux (le bouton "Joué / pas joué")</li>
+                    <li>Utiliser ce service pour supprimer les jeux.</li>
+                </ol>
+            </article>
         </div>
     );
 };
