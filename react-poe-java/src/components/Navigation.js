@@ -12,7 +12,9 @@ const Navigation = () => {
                     <NavLink to="/routing">Routing</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/projet">Projet fil rouge</NavLink>
+                    <NavLink style={{ color: "red" }} to="/projet">
+                        Projet fil rouge
+                    </NavLink>
                 </li>
                 <li>
                     <NavLink to="/statics">Données statics</NavLink>
