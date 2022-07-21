@@ -1,14 +1,22 @@
 import axios from "axios";
 import { useState } from "react";
-
+import { getJoke } from "./../utils/services/JokeService";
 const Data = function () {
     const [joke, setJoke] = useState("");
+    const [joke2, setJoke2] = useState({});
 
-    function getJoke() {
-        axios
-            .get("https://v2.jokeapi.dev/joke/Programming?type=single")
-            .then(({ data }) => setJoke(data.joke))
-            .catch((err) => alert("C'est cassé..."));
+    function loadSingle() {
+        getJoke("single").then((data) => setJoke(data.joke));
+    }
+    function loadTwoPart() {
+        getJoke("twopart").then(({ setup, delivery }) => setJoke2({ setup, delivery }));
+    }
+    function loadJoke() {
+        getJoke().then((joke) => setJoke(joke));
+    }
+    async function asyncLoadJoke() {
+        const joke = await getJoke();
+        setJoke(joke);
     }
 
     async function getJokeAsync() {
@@ -26,6 +34,7 @@ const Data = function () {
             <h1>Gérer les requêtes</h1>
 
             <article>
+                <h2>Using Axios directly in this component</h2>
                 <div>
                     <p>
                         <strong>Methode 1 :</strong>
@@ -52,11 +61,48 @@ const Data = function () {
                     <pre>{"    }"}</pre>
                     <pre>{"}"}</pre>
                 </div>
+            </article>
+            <article>
+                <h2>Using JokeService</h2>
+                <div>
+                    <p>
+                        <b>JokeService.js</b>
+                    </p>
+                    <pre>{'const url = "https://v2.jokeapi.dev/joke/Programming";'}</pre>
+                    <pre>{""}</pre>
+                    <pre>{"export const getJoke = (type) =>"}</pre>
+                    <pre>{"    axios"}</pre>
+                    <pre>{"        .get(url, {"}</pre>
+                    <pre>{"            params: { type },"}</pre>
+                    <pre>{"        })"}</pre>
+                    <pre>{"        .then((res) => res.data)"}</pre>
+                    <pre>{'        .catch((err) => "Aucune joke à récupérer");'}</pre>
+                </div>
 
                 <div>
-                    <button onClick={getJokeAsync}>Get Joke !</button>
+                    <p>
+                        <b>Bouton 1</b>
+                    </p>
+                    <pre>{"function loadSingle() {"}</pre>
+                    <pre>{'    getJoke("single").then((data) => setJoke(data.joke));'}</pre>
+                    <pre>{"}"}</pre>
+                    <button onClick={loadSingle}>Get Joke !</button>
                 </div>
                 <div className="card">{joke}</div>
+                <div>
+                    <p>
+                        <b>Bouton 2</b>
+                    </p>
+                    <pre>{"function loadTwoPart() {"}</pre>
+                    <pre>{'    getJoke("twopart").then(({ setup, delivery }) => setJoke2({ setup, delivery }));'}</pre>
+                    <pre>{"}"}</pre>
+                    <button onClick={loadTwoPart}>Get Joke two part !</button>
+                </div>
+                <div className="card">
+                    {joke2?.setup}
+                    <br />
+                    {joke2?.delivery}
+                </div>
             </article>
         </>
     );
