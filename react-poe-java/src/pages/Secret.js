@@ -5,7 +5,15 @@ const Secret = function () {
     const [secrets, setSecrets] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:9876/secrets").then(({ data }) => setSecrets(data));
+        const token = localStorage.getItem("token");
+        let headers = {};
+        if (token) headers = { Authorization: "Bearer " + token };
+        axios
+            .get("http://localhost:9876/secrets", {
+                headers,
+            })
+            .then(({ data }) => setSecrets(data))
+            .catch(() => setSecrets([{ id: -1, message: "NOT CONNECTED" }]));
     }, []);
 
     return (

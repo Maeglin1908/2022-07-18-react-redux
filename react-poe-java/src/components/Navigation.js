@@ -43,6 +43,9 @@ const Navigation = () => {
                 <li>
                     <NavLink to="/secret">Secret</NavLink>
                 </li>
+                <li>
+                    <button onClick={() => localStorage.clear()}>Déconnexion</button>
+                </li>
             </ul>
         </nav>
     );
