@@ -13,6 +13,7 @@ const Authentication = function () {
             if (page === "login") {
                 const { data } = await axios.post(`${url}/login`, user);
                 console.log("Connecté ", data);
+                localStorage.setItem("token", data.accessToken);
             } else if (page === "register") {
                 const { data } = await axios.post(`${url}/register`, user);
                 console.log("Inscrit ", data);

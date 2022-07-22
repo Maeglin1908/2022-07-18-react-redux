@@ -21,7 +21,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "api": "json-server --watch ./db/db.json --port 6789",
-        "auth": "json-server-auth ./db/db.json --port 9876"
+        "auth": "json-server-auth ./db/db.json --port 9876 -r ./db/routes.json"
     },
     "eslintConfig": {
         "extends": [
