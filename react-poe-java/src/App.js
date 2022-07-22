@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
+import Authentication from "./pages/Authentication";
 import Crud from "./pages/Crud";
 import Data from "./pages/Data";
 import EffetBord from "./pages/EffetBord";
@@ -35,6 +36,7 @@ function App() {
                         <Route path="/async" element={<Data />} />
                         <Route path="/effetbord" element={<EffetBord />} />
                         <Route path="/crud" element={<Crud />} />
+                        <Route path="/auth" element={<Authentication />} />
                     </Routes>
                 </main>
             </BrowserRouter>
