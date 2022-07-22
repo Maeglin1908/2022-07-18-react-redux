@@ -12,6 +12,7 @@ import Props from "./pages/Props";
 import Reactivity from "./pages/Reactivity";
 import Routing from "./pages/Routing";
 import StaticData from "./pages/StaticData";
+import Secret from "./pages/Secret";
 
 import "./styles/App.css";
 
@@ -37,6 +38,7 @@ function App() {
                         <Route path="/effetbord" element={<EffetBord />} />
                         <Route path="/crud" element={<Crud />} />
                         <Route path="/auth" element={<Authentication />} />
+                        <Route path="/secret" element={<Secret />} />
                     </Routes>
                 </main>
             </BrowserRouter>
