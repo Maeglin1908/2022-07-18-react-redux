@@ -40,6 +40,9 @@ const Navigation = () => {
                 <li>
                     <NavLink to="/auth">Authentication</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/secret">Secret</NavLink>
+                </li>
             </ul>
         </nav>
     );
