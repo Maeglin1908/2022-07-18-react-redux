@@ -1,116 +1,132 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "first_name": "Seamus",
-            "last_name": "Carlon",
-            "email": "scarlon0@w3.org",
-            "gender": "Male",
-            "ip_address": "125.219.74.238"
-        },
-        {
-            "id": 2,
-            "first_name": "Lorens",
-            "last_name": "Bachelar",
-            "email": "lbachelar1@businessinsider.com",
-            "gender": "Male",
-            "ip_address": "119.156.17.189"
-        },
-        {
-            "id": 3,
-            "first_name": "Geraldine",
-            "last_name": "Domelow",
-            "email": "gdomelow2@posterous.com",
-            "gender": "Female",
-            "ip_address": "107.238.196.87"
-        },
-        {
-            "id": 4,
-            "first_name": "Kandace",
-            "last_name": "Ruske",
-            "email": "kruske3@networksolutions.com",
-            "gender": "Female",
-            "ip_address": "149.148.48.12"
-        },
-        {
-            "id": 5,
-            "first_name": "Dew",
-            "last_name": "Preddle",
-            "email": "dpreddle4@washington.edu",
-            "gender": "Male",
-            "ip_address": "166.113.115.125"
-        },
-        {
-            "id": 6,
-            "first_name": "Cecily",
-            "last_name": "Hryniewicz",
-            "email": "chryniewicz5@digg.com",
-            "gender": "Female",
-            "ip_address": "238.108.176.79"
-        },
-        {
-            "id": 7,
-            "first_name": "Mel",
-            "last_name": "Patemore",
-            "email": "mpatemore6@mediafire.com",
-            "gender": "Male",
-            "ip_address": "41.99.198.229"
-        },
-        {
-            "id": 8,
-            "first_name": "Ashlee",
-            "last_name": "Bradnocke",
-            "email": "abradnocke7@networkadvertising.org",
-            "gender": "Female",
-            "ip_address": "252.94.115.134"
-        },
-        {
-            "id": 9,
-            "first_name": "Lynde",
-            "last_name": "Ruggiero",
-            "email": "lruggiero8@microsoft.com",
-            "gender": "Female",
-            "ip_address": "201.23.205.98"
-        },
-        {
-            "id": 10,
-            "first_name": "Julie",
-            "last_name": "Duer",
-            "email": "jduer9@ebay.com",
-            "gender": "Female",
-            "ip_address": "183.40.252.151"
-        },
-        {
-            "id": 11,
-            "first_name": "Jolie",
-            "last_name": "Spacy",
-            "email": "jspacya@patch.com",
-            "gender": "Female",
-            "ip_address": "72.89.208.118"
-        },
-        {
-            "id": 12,
-            "first_name": "Dunc",
-            "last_name": "Minmagh",
-            "email": "dminmaghb@creativecommons.org",
-            "gender": "Male",
-            "ip_address": "203.26.17.36"
-        },
-        {
-            "id": 13,
-            "first_name": "Honoria",
-            "last_name": "Henze",
-            "email": "hhenzec@alibaba.com",
-            "gender": "Female",
-            "ip_address": "126.45.34.153"
-        },
-        {
-            "id": 14,
-            "first_name": "Britni",
-            "last_name": "Otteridge",
-            "email": "botteridged@comsenz.com",
-            "gender": "Female",
-            "ip_address": "195.202.97.228"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Seamus",
+      "last_name": "Carlon",
+      "email": "scarlon0@w3.org",
+      "gender": "Male",
+      "ip_address": "125.219.74.238",
+      "password": "test"
+    },
+    {
+      "id": 2,
+      "first_name": "Lorens",
+      "last_name": "Bachelar",
+      "email": "lbachelar1@businessinsider.com",
+      "gender": "Male",
+      "ip_address": "119.156.17.189"
+    },
+    {
+      "id": 3,
+      "first_name": "Geraldine",
+      "last_name": "Domelow",
+      "email": "gdomelow2@posterous.com",
+      "gender": "Female",
+      "ip_address": "107.238.196.87"
+    },
+    {
+      "id": 4,
+      "first_name": "Kandace",
+      "last_name": "Ruske",
+      "email": "kruske3@networksolutions.com",
+      "gender": "Female",
+      "ip_address": "149.148.48.12"
+    },
+    {
+      "id": 5,
+      "first_name": "Dew",
+      "last_name": "Preddle",
+      "email": "dpreddle4@washington.edu",
+      "gender": "Male",
+      "ip_address": "166.113.115.125"
+    },
+    {
+      "id": 6,
+      "first_name": "Cecily",
+      "last_name": "Hryniewicz",
+      "email": "chryniewicz5@digg.com",
+      "gender": "Female",
+      "ip_address": "238.108.176.79"
+    },
+    {
+      "id": 7,
+      "first_name": "Mel",
+      "last_name": "Patemore",
+      "email": "mpatemore6@mediafire.com",
+      "gender": "Male",
+      "ip_address": "41.99.198.229"
+    },
+    {
+      "id": 8,
+      "first_name": "Ashlee",
+      "last_name": "Bradnocke",
+      "email": "abradnocke7@networkadvertising.org",
+      "gender": "Female",
+      "ip_address": "252.94.115.134"
+    },
+    {
+      "id": 9,
+      "first_name": "Lynde",
+      "last_name": "Ruggiero",
+      "email": "lruggiero8@microsoft.com",
+      "gender": "Female",
+      "ip_address": "201.23.205.98"
+    },
+    {
+      "id": 10,
+      "first_name": "Julie",
+      "last_name": "Duer",
+      "email": "jduer9@ebay.com",
+      "gender": "Female",
+      "ip_address": "183.40.252.151"
+    },
+    {
+      "id": 11,
+      "first_name": "Jolie",
+      "last_name": "Spacy",
+      "email": "jspacya@patch.com",
+      "gender": "Female",
+      "ip_address": "72.89.208.118"
+    },
+    {
+      "id": 12,
+      "first_name": "Dunc",
+      "last_name": "Minmagh",
+      "email": "dminmaghb@creativecommons.org",
+      "gender": "Male",
+      "ip_address": "203.26.17.36"
+    },
+    {
+      "id": 13,
+      "first_name": "Honoria",
+      "last_name": "Henze",
+      "email": "hhenzec@alibaba.com",
+      "gender": "Female",
+      "ip_address": "126.45.34.153"
+    },
+    {
+      "id": 14,
+      "first_name": "Britni",
+      "last_name": "Otteridge",
+      "email": "botteridged@comsenz.com",
+      "gender": "Female",
+      "ip_address": "195.202.97.228"
+    },
+    {
+      "email": "nilgam@proton.me",
+      "password": "$2a$10$HbHGlLHOUnJt5aD2mmGf3OYd7mxoz9C.q4GscnuIFHn2nzFn7/3l6",
+      "id": 15
+    },
+    {
+      "email": "nilgam@pronton2.me",
+      "password": "$2a$10$AL7hBmt.UjsBoC5UWE04JO3C/xijNT5uoQtyZ6z83mytmB0El8e4G",
+      "id": 16
+    },
+    {
+      "email": "nil@nil.nil",
+      "password": "$2a$10$jQsdd/uud9azCX2wCFlsLuM.NalkyTghv2XSWwYktnUKCB1IdoRmy",
+      "id": 17
+    }
+  ]
 }

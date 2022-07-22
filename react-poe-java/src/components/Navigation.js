@@ -34,9 +34,11 @@ const Navigation = () => {
                 <li>
                     <NavLink to="/effetbord">Effets de bord</NavLink>
                 </li>
-
                 <li>
                     <NavLink to="/crud">CRUD</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/auth">Authentication</NavLink>
                 </li>
             </ul>
         </nav>
