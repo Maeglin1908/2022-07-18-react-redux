@@ -1,3 +1,3 @@
 {
-    "secrets": 660 // Bloque en lecture la route de l'api pour les anonymes/guests.
+    "secrets": 660
 }
