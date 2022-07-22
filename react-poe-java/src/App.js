@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
 import Authentication from "./pages/Authentication";
@@ -11,8 +11,8 @@ import Projet from "./pages/Projet";
 import Props from "./pages/Props";
 import Reactivity from "./pages/Reactivity";
 import Routing from "./pages/Routing";
-import StaticData from "./pages/StaticData";
 import Secret from "./pages/Secret";
+import StaticData from "./pages/StaticData";
 
 import "./styles/App.css";
 
@@ -38,7 +38,15 @@ function App() {
                         <Route path="/effetbord" element={<EffetBord />} />
                         <Route path="/crud" element={<Crud />} />
                         <Route path="/auth" element={<Authentication />} />
-                        <Route path="/secret" element={<Secret />} />
+                        {/* <Route path="/secret" element={<Secret />} /> */}
+                        <Route
+                            path="/secret"
+                            element={
+                                <ProtectedRoute>
+                                    <Secret />
+                                </ProtectedRoute>
+                            }
+                        />
                     </Routes>
                 </main>
             </BrowserRouter>
@@ -47,3 +55,10 @@ function App() {
 }
 
 export default App;
+
+const ProtectedRoute = ({ children }) => {
+    if (!localStorage.getItem("token")) {
+        return <Navigate to="/auth" replace />;
+    }
+    return children;
+};
