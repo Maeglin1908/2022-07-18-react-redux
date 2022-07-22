@@ -37,7 +37,14 @@ function App() {
                         <Route path="/async" element={<Data />} />
                         <Route path="/effetbord" element={<EffetBord />} />
                         <Route path="/crud" element={<Crud />} />
-                        <Route path="/auth" element={<Authentication />} />
+                        <Route
+                            path="/auth"
+                            element={
+                                <ProtectedRoute>
+                                    <Authentication />
+                                </ProtectedRoute>
+                            }
+                        />
                         {/* <Route path="/secret" element={<Secret />} /> */}
                         <Route
                             path="/secret"
@@ -57,8 +64,14 @@ function App() {
 export default App;
 
 const ProtectedRoute = ({ children }) => {
-    if (!localStorage.getItem("token")) {
-        return <Navigate to="/auth" replace />;
+    if (children.type === "Secret") {
+        if (!localStorage.getItem("token")) {
+            return <Navigate to="/auth" replace />;
+        }
+    } else if (children.type === "Authentication") {
+        if (localStorage.getItem("token")) {
+            return <Navigate to="/secret" replace />;
+        }
     }
     return children;
 };

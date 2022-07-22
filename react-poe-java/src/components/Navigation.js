@@ -37,15 +37,28 @@ const Navigation = () => {
                 <li>
                     <NavLink to="/crud">CRUD</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/auth">Authentication</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/secret">Secret</NavLink>
-                </li>
-                <li>
-                    <button onClick={() => localStorage.clear()}>Déconnexion</button>
-                </li>
+                {localStorage.getItem("token") == null && (
+                    <li>
+                        <NavLink to="/auth">Authentication</NavLink>
+                    </li>
+                )}
+                {localStorage.getItem("token") == null || (
+                    <>
+                        <li>
+                            <NavLink to="/secret">Secret</NavLink>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                onClick={() => {
+                                    localStorage.clear();
+                                }}
+                            >
+                                Déconnexion
+                            </a>
+                        </li>
+                    </>
+                )}
             </ul>
         </nav>
     );
