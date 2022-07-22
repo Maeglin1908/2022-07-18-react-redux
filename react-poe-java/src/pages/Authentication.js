@@ -1,11 +1,16 @@
 import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useSelector } from "react-redux";
 import "./../styles/Authentication.css";
 
 const Authentication = function () {
     const { handleSubmit, register } = useForm();
     const [page, setPage] = useState("login");
+
+    // Rien à voir avec auth, mais avec Redux. Parce que flemme.
+    const panier = useSelector((state) => state?.panier.values);
+
     const url = "http://localhost:9876";
 
     async function login(user) {
@@ -22,7 +27,8 @@ const Authentication = function () {
             console.log(error.toJSON());
         }
     }
-
+    console.log("PANIER");
+    console.log(panier);
     return (
         <>
             <h1>Authentication</h1>
@@ -71,6 +77,16 @@ const Authentication = function () {
                         </p>
                     </fieldset>
                 </form>
+            </article>
+
+            <article>
+                <h2>Mon Panier</h2>
+
+                <ul>
+                    {panier.map((el) => (
+                        <li key={el.id}>{el}</li>
+                    ))}
+                </ul>
             </article>
         </>
     );

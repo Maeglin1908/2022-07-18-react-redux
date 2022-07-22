@@ -1,7 +1,9 @@
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import "./../styles/Navigation.css";
 
 const Navigation = () => {
+    const panier = useSelector((state) => state?.panier.values);
     return (
         <nav>
             <ul>
@@ -37,6 +39,9 @@ const Navigation = () => {
                 <li>
                     <NavLink to="/crud">CRUD</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/redux">Redux</NavLink>
+                </li>
                 {localStorage.getItem("token") == null && (
                     <li>
                         <NavLink to="/auth">Authentication</NavLink>
@@ -59,6 +64,7 @@ const Navigation = () => {
                         </li>
                     </>
                 )}
+                <li>Panier : {panier.length}</li>
             </ul>
         </nav>
     );

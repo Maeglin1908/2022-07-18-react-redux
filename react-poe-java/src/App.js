@@ -10,6 +10,7 @@ import Presentation from "./pages/Presentation";
 import Projet from "./pages/Projet";
 import Props from "./pages/Props";
 import Reactivity from "./pages/Reactivity";
+import Redux from "./pages/Redux";
 import Routing from "./pages/Routing";
 import Secret from "./pages/Secret";
 import StaticData from "./pages/StaticData";
@@ -37,6 +38,7 @@ function App() {
                         <Route path="/async" element={<Data />} />
                         <Route path="/effetbord" element={<EffetBord />} />
                         <Route path="/crud" element={<Crud />} />
+                        <Route path="/redux" element={<Redux />} />
                         <Route
                             path="/auth"
                             element={
